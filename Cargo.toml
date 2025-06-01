@@ -3,9 +3,17 @@ name = "hans_oxide"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "hans_oxide"
+path = "src/main.rs"
+doctest = true
+test = false
+bench = false
+
 [dependencies]
 embedded-alloc = "0.6.0"
 embedded-io = "0.6.1"
+embedded-sdmmc = "0.8.1"
 fatfs = { git = "https://github.com/rafalh/rust-fatfs", version = "0.4", default-features = false, features = ["alloc"] }
 panic-halt = "1.0.0"
 riscv = { version = "0.13.0", features = ["critical-section-single-hart"] }
